@@ -70,7 +70,7 @@ class InverseIndex():
         result["doc_matched_count"] = len(matched_doc_ids)
         for ids in matched_doc_ids:
             result["doc"].append(self.data[ids])
-        return result
+        return json.dumps(result)
 
     def _add_index(self, index, key, doc_num):
         if index.get(key):
